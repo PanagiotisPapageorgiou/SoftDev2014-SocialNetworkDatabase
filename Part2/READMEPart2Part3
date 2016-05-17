@@ -1,0 +1,71 @@
+#############
+#	PART 2	#
+#############
+
+
+* Genika, exei ylopoih8ei olh h ektash tou sygekrimenou zhthmatos.
+
+* Eidikotera, To prwto meros me tis metrikes synarthseis, einai artiws oloklhrwmeno. 
+
+* Sto deytero meros, to Query 1 leitourgei kanonika. Ta ypoloipa, enw einai men grammena oloklhra, 
+  parousiazoun orismena provlhmata en merei. Pio sygekrimena,to Query 2 nosei apo ena segmentation fault, to opoio den kataferame mexri 
+  kai thn teleytaia stigmh na broume. Parallhla, to Query 4, exei syggrafei eks oloklyrou, alla den 
+  exei prolavei na testaristei plhrws.
+
+****GIA NA DIABASEI TO PART 2 APO TA ARXEIA, TA XREIAZETAI SE ENA FAKELO ME ONOMA DataSet ston idio fakelo me to ektelesimo ***
+***PROSOXH: perimenei person.csv kai oxi persons.csv***
+
+
+#############
+#	PART 3	#
+#############
+
+****GIA NA DIABASEI TO PART 3 APO TA ARXEIA, TA XREIAZETAI SE ENA FAKELO ME ONOMA DataSetPart3 ston idio fakelo me to ektelesimo ***
+***PROSOXH: perimenei person.csv kai oxi persons.csv***
+
+* Exei ylopoih8ei o scheduler me skopo thn epiteyksh ths parallhlias ston ypologismo twn top n forums. 
+  To prwtokolo pou ylopoiei ton scheduler epiterepei thn pragmatopoihsh parallhlias kai se polles alles
+  periptwseis ston kwdika mas, opws gia paradeigma ston filereader. Par' ola ayta kai anagnwrizontas
+  tis tromaktikes dynatothtes sth beltiwsh ths apodoshs to synolikou programmatos mas, protimhsame na
+  afhsoume sthn akrh th sygekrimenh strathgikh prokeimenou na dwsoume emfash sthn artioterh syggrafh
+  tou synolou ths ergasias.
+
+* Analytikotera, o scheduler leitourgei ws ekshs:
+  Dhmiourgountai threads, me to main apo ayta na paragei tasks me sygekrimeno typo to ka8ena, opws forumFill,
+  forumCalculation, ktl. Topo8etei, me me8odous sygxronismou mutex kai condition variables opoiodhpote task
+  einai epi8ymhto apo emas se mia oura, kataskeyasmenh gia ayto to skopo, thn jobQueue.
+  Ta worker threads, synagwnizontai gia thn prosvash sthn oura kai lamvanoun ena task th fora. Analoga me ton
+  typo tou, to ekastote task anagnwrizei poia synarthsh prepei na kalesei gia na xeiristei th douleia.
+
+* Oi koines domes pou xrhsimopoei to main kai ta worker threads briskontai se mia global metablhth me onoma globalUtilities. 
+  Se ayth yparxoun oloi oi grafoi kai oi koines domes pou prokyptoun mesw toy data set. Ka8e mia domh 
+  prostateyetai apo ena mutex. Sto globalUtilities symperilamvanontai epishs kai alles xrhsimes domes,
+  opws to jobQueue kai ta topNForums.
+
+* Epipros8etws, exei ylopoih8ei ena extra thread, to opoio exei th dynatothta na termatisei to programma ana
+  pasa stigmh kai na doulepsei ws garbage collector, apeley8eronontas, etsi, th mnhmh. 
+
+* Exoun ylopoih8ei kai oi dyo algoritmoi tou 3ou merous, me ton prwto na xrhsimopoiei anadromh gia ton ypologismo
+  twn klikwn kai na einai idiaitera grhgoros kai to deytero na einai pio argos alla kai na leitourgei me 
+  kapoia memory bugs.
+
+
+
+
+#########################
+#	ANAGNWSH ARXEIWN	#
+#########################
+
+
+* Prin ksekinhsei h 'pragmatikh' ektelesh tou programmatos, einai aparaithto na diabastoun ta katallhla arxeia.
+  Ka8e ypoprovlhma, apaitei ena yposynolo tou synolikou ari8mou arxeiwn tou Data Set gia na leitourghsei.
+  Prin loipwn ton 'xrhsimo' kwdika, exei topo8eth8ei o filereader, h synarthsh pou einai ypey8ynh gia thn
+  anagnwsh olou tou Data Set, an ayto einai aparaithto. 
+
+* Kata thn ekkinhsh tou ektelesimou, o xrhsths erwtatai gia ta arxeia person.csv, post.csv, forum.csv, comment.csv
+  organisation.csv kai tag.csv, an epi8ymei na diavastoun. H katafatikh apanthsh dhmiourgei ksexwristo grafo
+  gia tis adistoixes kathgories. Sth synexeia, ginontai erwthseis gia thn pros8hkh akmwn, opws aytes
+  prokyptoun apo to do8en Data Set, gia paradeigma person_knows_person, post_hasCreator_person, ktl.
+
+* Yparxei epishs h dynatothta eisagwghs symmetrikwn akmwn gia dieykolynsh programmatismoy. Gia paradeigma
+  h sxesh post_hasCreator_person na symplhrw8ei me thn person_HasCreated_post. 

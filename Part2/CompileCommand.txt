@@ -1,0 +1,3 @@
+gcc -o level2 bucket.c datatypes.c EdgeTypes.c fileReader.c uberlist.c part2Main.c hash.c gtools.c GraphLib.c GraphNodeTypes.c GraphQueries.c -lm
+
+
