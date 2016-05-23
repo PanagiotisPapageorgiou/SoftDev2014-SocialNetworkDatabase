@@ -1,1 +1,0 @@
-gcc -o level3 bucket.c datatypes.c EdgeTypes.c fileReader.c uberlist.c part3Main.c hash.c gtools.c GraphLib.c GraphNodeTypes.c GraphQueries.c part3Tools.c jobQueue.c -lm -lpthread
